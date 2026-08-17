@@ -34,4 +34,12 @@
 - [ ] No secrets; config via environment variables
 
 ## 6. Evidence links
--
+- ## Evidencias - Semana 02
+
+### Diagrama
+
+![Diagrama Semana 02](./diagrama.jpg)
+
+### Presentación - Scrum vs Kanban
+
+[Ver presentación Scrum vs Kanban](./Scrum%20vs%20Kanban.pptx)
