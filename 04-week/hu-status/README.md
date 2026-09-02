@@ -35,3 +35,11 @@
 
 ## 6. Evidence links
 -
+
+## 7. Week 4 learning summary — Sessions 1 and 2
+
+![Week 4: from a running service to MVP 1. Hexagonal structure, dependency injection, walking skeleton, API contracts, sprint scope and Definition of Done.](week04-service-mvp1-summary.png)
+
+Session 1 establishes a runnable foundation: organize domain, application and adapters; inject dependencies at the composition root; and integrate a thin end-to-end slice with a real database from day one. Session 2 plans MVP 1 on that foundation: agree the API contract before implementing its endpoints, split stories into small verifiable tasks, estimate relative size, commit only the Musts that fit the sprint goal, and agree a release-grade Definition of Done.
+
+**Key takeaway:** MVP reduces scope, not standards. This image summarizes the course sessions; it does not claim that implementation tasks or tests have been completed.
