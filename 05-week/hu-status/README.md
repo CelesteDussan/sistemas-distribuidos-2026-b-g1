@@ -35,3 +35,13 @@
 
 ## 6. Evidence links
 -
+
+## 7. Week 5 learning summary — Sessions 1 and 2
+
+![Week 5: from containers to MVP 1. Docker images, multi-stage builds, Compose, runtime configuration and volumes support a verified, versioned release with a working demo and retrospective.](week05-docker-mvp1-release-summary.png)
+
+**Session 1 — Containerization with Docker:** a Dockerfile builds an image, a container runs that image, and a registry stores images for distribution. Multi-stage builds and .dockerignore keep images small and clean. Docker Compose connects services and a real database using service names; configuration is supplied at runtime and persistent data belongs in volumes.
+
+**Session 2 — Shipping MVP 1:** promote the increment through develop, qa and main, then tag the release. Verify acceptance criteria, unit and integration tests, coverage, startup against a real database, the happy path and a key error path, configuration safety and documentation. Demo working software, then turn retrospective improvements and re-estimated unfinished stories into the next backlog.
+
+**Key takeaway:** MVP reduces scope, not standards. This is a learning summary of both sessions, not a claim that the project has completed these release requirements.
