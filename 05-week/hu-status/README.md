@@ -48,6 +48,6 @@
 
 ## 8. EduTrack weekly project progress
 
-![EduTrack Week 5: mockup corrected and documentation completed; specific blockers not detailed; implementation starts next week, with proposed steps for architecture, API contracts, Docker, database and a first end-to-end feature.](week05-edutrack-progress-summary.png)
+![EduTrack Week 5: mockup corrected and documentation completed; specific blockers not detailed; implementation starts next week, with proposed steps for architecture, API contracts, Docker, database and a first end-to-end feature.](week05-edutrack-progress-summary-es.png)
 
 The project update reports that the mockup was corrected and the documentation completed. Implementation is planned to start next week. Specific blockers were not detailed; the image separates forward-looking risks and proposed technical steps from completed work.
