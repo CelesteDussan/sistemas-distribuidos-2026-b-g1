@@ -56,7 +56,7 @@ Reporting period: **September 28-October 4, 2026 (America/Bogota)**. Reconstruct
 These were documentation PRs to main under the agreed documentation workflow, not per-environment HU implementation PRs. No new unit/integration suite or full backend boundary audit is claimed; documentation validation is recorded below.
 
 ## 6. Evidence links
-- [Team Trello board used for the project](https://trello.com/b/vJDkQPx6/eductrack) — Historical project reference; current board status and weekly ceremonies are not verified as of October 13, 2026.
+- [Team Trello board used for the project](https://trello.com/b/vJDkQPx6/eductrack) — Board accessed in the browser on October 13, 2026: 74 cards in Aprobado (pendiente merge). This current snapshot does not establish historical weekly completion, ceremony attendance or GitHub approval/merge.
 - [Profile CONFIG](https://github.com/CelesteDussan/CelesteDussan/blob/main/README.md) — Full name and username checked on October 13, 2026.
 
 - [C4 context correction](https://github.com/code-corhuila/educk-docs/commit/b6752836724d007d5dacff597ef263718d2c1a6e)

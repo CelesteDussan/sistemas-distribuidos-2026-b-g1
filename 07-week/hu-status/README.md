@@ -47,7 +47,7 @@
 - [x] No secrets; config via environment variables
 
 ## 6. Evidence links
-- [Team Trello board used for the project](https://trello.com/b/vJDkQPx6/eductrack) — Historical project reference; current board status and weekly ceremonies are not verified as of October 13, 2026.
+- [Team Trello board used for the project](https://trello.com/b/vJDkQPx6/eductrack) — Board accessed in the browser on October 13, 2026: 74 cards in Aprobado (pendiente merge). This current snapshot does not establish historical weekly completion, ceremony attendance or GitHub approval/merge.
 - [Profile CONFIG](https://github.com/CelesteDussan/CelesteDussan/blob/main/README.md) — Full name and username checked on October 13, 2026.
 
 - [EduTrack service blocks and responsibilities](https://github.com/code-corhuila/educk-docs/blob/main/09-microservices/service-catalog.md)

@@ -54,7 +54,7 @@ Reporting period: **September 21-27, 2026 (America/Bogota)**. Reconstructed on O
 The test checkbox covers the recorded frontend unit tests, not full integration. Feature branches targeted develop but did not use the syllabus hu-xxx-dev naming. A complete backend hexagonal audit was not performed in this report.
 
 ## 6. Evidence links
-- [Team Trello board used for the project](https://trello.com/b/vJDkQPx6/eductrack) — Historical project reference; current board status and weekly ceremonies are not verified as of October 13, 2026.
+- [Team Trello board used for the project](https://trello.com/b/vJDkQPx6/eductrack) — Board accessed in the browser on October 13, 2026: 74 cards in Aprobado (pendiente merge). This current snapshot does not establish historical weekly completion, ceremony attendance or GitHub approval/merge.
 - [Profile CONFIG](https://github.com/CelesteDussan/CelesteDussan/blob/main/README.md) — Full name and username checked on October 13, 2026.
 
 - [Grade UI and weighted average commit](https://github.com/code-corhuila/educk-academic-portal/commit/4c7150858e6d95c1fa2b25884c6d751b780ebd8c)

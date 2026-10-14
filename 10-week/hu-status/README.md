@@ -57,7 +57,7 @@ Reporting period: **October 5-11, 2026 (America/Bogota)**. Reconstructed on Octo
 Existing unit suites were rerun and simulated browser checks were added locally; the unchecked tests item avoids claiming new committed unit/integration coverage for these UI fixes. Earlier PRs retained their original branch names, and the new hu-005-dev commit did not yet have verified PR evidence. No full backend hexagonal audit is claimed.
 
 ## 6. Evidence links
-- [Team Trello board used for the project](https://trello.com/b/vJDkQPx6/eductrack) — Historical project reference; current board status and weekly ceremonies are not verified as of October 13, 2026.
+- [Team Trello board used for the project](https://trello.com/b/vJDkQPx6/eductrack) — Board accessed in the browser on October 13, 2026: 74 cards in Aprobado (pendiente merge). This current snapshot does not establish historical weekly completion, ceremony attendance or GitHub approval/merge.
 - [Profile CONFIG](https://github.com/CelesteDussan/CelesteDussan/blob/main/README.md) — Full name and username checked on October 13, 2026.
 
 - [Shell tokens PR #14](https://github.com/code-corhuila/educk-front/pull/14) · [Attendance tokens PR #7](https://github.com/code-corhuila/educk-attendance-portal/pull/7)
