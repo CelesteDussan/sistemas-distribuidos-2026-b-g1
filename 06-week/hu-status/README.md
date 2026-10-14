@@ -5,7 +5,7 @@
 # Weekly Status - Week 06
 
 <!-- CONFIG-START - must match your profile repo (username/username) CONFIG -->
-- FULL_NAME: Maria Celeste Dussan
+- FULL_NAME: Maria Celeste Dussan Ospina
 - GITHUB_USER: CelesteDussan
 - TEAM: G1
 - SPRINT_GOAL: Align the EduTrack MVP and documentation around HU-001 and HU-004, and plan a reproducible Docker Compose environment with health checks and externalized configuration.
@@ -43,6 +43,9 @@
 - [x] No secrets; config via environment variables
 
 ## 6. Evidence links
+- [Team Trello board used for the project](https://trello.com/b/vJDkQPx6/eductrack) — Board accessed in the browser on October 13, 2026: 74 cards in Aprobado (pendiente merge). This current snapshot does not establish historical weekly completion, ceremony attendance or GitHub approval/merge.
+- [Profile CONFIG](https://github.com/CelesteDussan/CelesteDussan/blob/main/README.md) — Full name and username checked on October 13, 2026.
+
 - [EduTrack project design and responsibilities](../../01-week/hu-status/PDR-EDUTRACK.md)
 - [Official HU-001 and HU-004 definitions and acceptance criteria](https://github.com/code-corhuila/educk-docs/blob/main/04-requirements/user-stories.md)
 - [HU-001 grade-recording sequence and notification flow](https://github.com/code-corhuila/educk-docs/blob/main/08-uml/diagrams/source/seq-grade-recorded.mmd)

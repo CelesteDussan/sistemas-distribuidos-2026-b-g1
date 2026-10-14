@@ -5,7 +5,7 @@
 # Weekly Status - Week 10
 
 <!-- CONFIG-START - must match your profile repo (username/username) CONFIG -->
-- FULL_NAME: Maria Celeste Dussan
+- FULL_NAME: Maria Celeste Dussan Ospina
 - GITHUB_USER: CelesteDussan
 - TEAM: G1
 - SPRINT_GOAL: Apply the official design system, repair production and responsive issues, and validate Identity and Attendance with explicit Phase 1 simulation limits before real-service QA.
@@ -57,6 +57,9 @@ Reporting period: **October 5-11, 2026 (America/Bogota)**. Reconstructed on Octo
 Existing unit suites were rerun and simulated browser checks were added locally; the unchecked tests item avoids claiming new committed unit/integration coverage for these UI fixes. Earlier PRs retained their original branch names, and the new hu-005-dev commit did not yet have verified PR evidence. No full backend hexagonal audit is claimed.
 
 ## 6. Evidence links
+- [Team Trello board used for the project](https://trello.com/b/vJDkQPx6/eductrack) — Board accessed in the browser on October 13, 2026: 74 cards in Aprobado (pendiente merge). This current snapshot does not establish historical weekly completion, ceremony attendance or GitHub approval/merge.
+- [Profile CONFIG](https://github.com/CelesteDussan/CelesteDussan/blob/main/README.md) — Full name and username checked on October 13, 2026.
+
 - [Shell tokens PR #14](https://github.com/code-corhuila/educk-front/pull/14) · [Attendance tokens PR #7](https://github.com/code-corhuila/educk-attendance-portal/pull/7)
 - [Identity shared-client build fix](https://github.com/code-corhuila/educk-identity-portal/commit/460615e40f2d7938797c3d53d1f5d34529cad339)
 - [Attendance shared-client build fix](https://github.com/code-corhuila/educk-attendance-portal/commit/03e6797a1bdfa538d7fc9039f363bb94c36c7ed3)

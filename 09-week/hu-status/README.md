@@ -5,7 +5,7 @@
 # Weekly Status - Week 09
 
 <!-- CONFIG-START - must match your profile repo (username/username) CONFIG -->
-- FULL_NAME: Maria Celeste Dussan
+- FULL_NAME: Maria Celeste Dussan Ospina
 - GITHUB_USER: CelesteDussan
 - TEAM: G1
 - SPRINT_GOAL: Reconcile EduTrack requirements, traceability, service and event contracts, and database isolation with the implemented portal slices.
@@ -32,6 +32,8 @@ Reporting period: **September 28-October 4, 2026 (America/Bogota)**. Reconstruct
 - Documented separate develop, qa and main deployments, externalized configuration and fail-closed secret variables. Submitted changes as small one-file documentation PRs without modifying governance.
 
 ## 3. Blockers and risks
+- Retrospective note (October 13): the separate-instance architecture described above was superseded by Annex J on October 11. The current rule is one shared instance, database and volume per engine/environment, with domain schemas and permissions. The original Week 9 work is preserved as historical evidence.
+
 - Inherited order-service examples, obsolete HU identifiers and unsupported completion/test claims made the old traceability unreliable; the documented corrections addressed those inconsistencies.
 - Service and event descriptions had diverged between canonical and derived documents. Correcting the documents did not automatically update implementations or establish runtime conformance.
 - Real API integration, persistence, event deduplication and complete UI-to-service acceptance still lacked sufficient evidence for Done.
@@ -54,6 +56,9 @@ Reporting period: **September 28-October 4, 2026 (America/Bogota)**. Reconstruct
 These were documentation PRs to main under the agreed documentation workflow, not per-environment HU implementation PRs. No new unit/integration suite or full backend boundary audit is claimed; documentation validation is recorded below.
 
 ## 6. Evidence links
+- [Team Trello board used for the project](https://trello.com/b/vJDkQPx6/eductrack) — Board accessed in the browser on October 13, 2026: 74 cards in Aprobado (pendiente merge). This current snapshot does not establish historical weekly completion, ceremony attendance or GitHub approval/merge.
+- [Profile CONFIG](https://github.com/CelesteDussan/CelesteDussan/blob/main/README.md) — Full name and username checked on October 13, 2026.
+
 - [C4 context correction](https://github.com/code-corhuila/educk-docs/commit/b6752836724d007d5dacff597ef263718d2c1a6e)
 - [Prioritized backlog](https://github.com/code-corhuila/educk-docs/commit/116ca5d3fa8377556300cc39d840ffb38c49d898)
 - [Functional requirements](https://github.com/code-corhuila/educk-docs/commit/ccf75556c5b0c786a22d15cff7412cb3ac0375fa) · [Traceability clarification](https://github.com/code-corhuila/educk-docs/commit/96fccaa0a22da138e456e87f33aca836f4325559)

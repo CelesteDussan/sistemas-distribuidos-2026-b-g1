@@ -5,7 +5,7 @@
 # Weekly Status - Week 07
 
 <!-- CONFIG-START - must match your profile repo (username/username) CONFIG -->
-- FULL_NAME: Maria Celeste Dussan
+- FULL_NAME: Maria Celeste Dussan Ospina
 - GITHUB_USER: CelesteDussan
 - TEAM: G1
 - SPRINT_GOAL: Organize EduTrack into clear service blocks, define synchronous and asynchronous interactions, and align HU-001, HU-002 and HU-004 with versioned API and event contracts.
@@ -47,6 +47,9 @@
 - [x] No secrets; config via environment variables
 
 ## 6. Evidence links
+- [Team Trello board used for the project](https://trello.com/b/vJDkQPx6/eductrack) — Board accessed in the browser on October 13, 2026: 74 cards in Aprobado (pendiente merge). This current snapshot does not establish historical weekly completion, ceremony attendance or GitHub approval/merge.
+- [Profile CONFIG](https://github.com/CelesteDussan/CelesteDussan/blob/main/README.md) — Full name and username checked on October 13, 2026.
+
 - [EduTrack service blocks and responsibilities](https://github.com/code-corhuila/educk-docs/blob/main/09-microservices/service-catalog.md)
 - [Synchronous REST and asynchronous messaging patterns](https://github.com/code-corhuila/educk-docs/blob/main/09-microservices/communication-patterns.md)
 - [Versioned domain-event catalog](https://github.com/code-corhuila/educk-docs/blob/main/09-microservices/event-catalog.md)
