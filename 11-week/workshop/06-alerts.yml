@@ -1,0 +1,46 @@
+groups:
+  - name: edutrack-attendance-availability
+    interval: 30s
+    rules:
+      - alert: AttendanceFastBudgetBurn
+        expr: |
+          (
+            sum(rate(attendance_requests_total{route="/api/v1/attendance",outcome="error"}[1h]))
+            /
+            sum(rate(attendance_requests_total{route="/api/v1/attendance",outcome=~"success|error"}[1h]))
+          ) > (14.4 * 0.01)
+          and
+          (
+            sum(rate(attendance_requests_total{route="/api/v1/attendance",outcome="error"}[5m]))
+            /
+            sum(rate(attendance_requests_total{route="/api/v1/attendance",outcome=~"success|error"}[5m]))
+          ) > (14.4 * 0.01)
+        for: 0m
+        labels:
+          severity: page
+          team: G1
+          service: attendance-service
+        annotations:
+          summary: "Attendance technical errors burn the 99% availability budget above 14.4x"
+          runbook_url: "https://github.com/CelesteDussan/sistemas-distribuidos-2026-b-g1/blob/codex/w11-observability/11-week/workshop/07-runbook.md"
+      - alert: AttendanceSlowBudgetBurn
+        expr: |
+          (
+            sum(rate(attendance_requests_total{route="/api/v1/attendance",outcome="error"}[6h]))
+            /
+            sum(rate(attendance_requests_total{route="/api/v1/attendance",outcome=~"success|error"}[6h]))
+          ) > (6 * 0.01)
+          and
+          (
+            sum(rate(attendance_requests_total{route="/api/v1/attendance",outcome="error"}[30m]))
+            /
+            sum(rate(attendance_requests_total{route="/api/v1/attendance",outcome=~"success|error"}[30m]))
+          ) > (6 * 0.01)
+        for: 0m
+        labels:
+          severity: ticket
+          team: G1
+          service: attendance-service
+        annotations:
+          summary: "Attendance technical errors burn the 99% availability budget above 6x"
+          runbook_url: "https://github.com/CelesteDussan/sistemas-distribuidos-2026-b-g1/blob/codex/w11-observability/11-week/workshop/07-runbook.md"
