@@ -35,5 +35,27 @@ The diagram has not been visually checked in GitHub, and PromQL was not executed
 
 Work is in branch `codex/w11-observability` of the personal fork. Checkpoint publications are
 separate; no published commit was amended, rebased or force-pushed. Every commit adds at most150 lines.
-CP4 and this closing checkpoint were published after the scheduled October20 20:30 cutoff.
+Delivery1 CP4 and CP5 were published after the scheduled October20 20:30 cutoff.
 The reflection is maintained separately by the student. Moodle submission and its time are not verified.
+
+## Delivery 2 artifacts and verification
+
+| Checkpoint | Artifact | Verification scope |
+|---|---|---|
+| CP6 | [SLIs, SLOs and budgets](05-slo.md) | Three exact metric queries; hypothetical school model and request/minute budget arithmetic checked |
+| CP7 | [Alerts](06-alerts.yml) and [policy](06-alert-policy.md) | YAML parsed, windows/labels/math checked; no live alert evaluation |
+| CP8 | [Fast-burn runbook](07-runbook.md) | Trace/PromQL diagnosis, three ordered mitigations and integrated recovery criteria reviewed |
+| CP9 | [Incident and postmortem](08-incident.md) | Four syntheticJSONlogs and analyticcounts/SLI/alertoutcomes checked; no live fault injection |
+| CP10 | [Updated weekly evidence](../hu-status/README.md) | D1history retained, D2commitlinks and honest limits recorded |
+
+The slow-only asynchronous incident exposes an end-to-end delay measurement gap; availability pages
+correctly remain inactive because the modeled requests succeed. The synchronous CP3probe is distinguished.
+Neither this model nor proposed notification metrics certify real production reliability or error budgets.
+
+Delivery2 requires at leastfive separate checkpoint publications, >=15minutes apart, in >=twoworkblocks;
+that publication history is retained without backdating or rewriting. Each commit adds at most150lines.
+The authoritative Moodle text requires submission before WednesdayOctober21 23:59-05:00; CP7onward
+were published late. The earlier Thursday10:10 PDF deadline was superseded by that supplied assignment text.
+The student must write CP6-CP9 reflections and a minimumone-page Implementation plan for my project
+in the same Google Doc. Their authorship, completion and Moodle submission are not certified here.
+Moodle D2submission is online text with fork,workshopfolder,reflection and the finalcommitURL.

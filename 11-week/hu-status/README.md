@@ -8,7 +8,7 @@
 - FULL_NAME: Maria Celeste Dussan Ospina
 - GITHUB_USER: CelesteDussan
 - TEAM: G1
-- SPRINT_GOAL: Make the HU-005 absence and HU-002 notification journey observable through trace propagation, structured logs and bounded metrics.
+- SPRINT_GOAL: Define and verify observability and reliability contracts for the HU-005 absence and HU-002 guardian notification journey.
 <!-- CONFIG-END -->
 
 ## 1. User stories worked this week
@@ -26,16 +26,28 @@
 - Defined four golden signals for three services, PromQL, label cardinality estimates and latency buckets; distinguished implemented Attendance metrics from proposed metrics.
 - [Reproduction commands and actual console output](../workshop/03-instrumentation/HOW-TO-RUN.md).
 
+### Delivery 2 technical contribution
+- Specified three rolling30-day SLIs/SLOs using CP4metrics and the official99%MVP availability/500msAttendance targets.
+- Documented a hypothetical250-student school:5,000monthlyregistrations,500absenceevents; budgets50HTTPerrors,250slowrequests and5technicalevent-processingfailures. These are estimates, not production counts.
+- Added multiwindow availability alerts14.4x(1h/5m) and6x(6h/30m), plus a traffic-sensitive budget policy. CachedSnakeYAML2.2 parsed the rules; no promtool/livePrometheus evaluation is claimed.
+- Wrote a runbook with trace/PromQL diagnosis, three ordered mitigations, role escalation and data-preserving recovery checks. Recovery operations were not executed.
+- Modeled the3s/25%/40min asyncbroker incident, four validatedJSONlogs and a blameless postmortem with three proposed stories. A slow successful broker does not cause HTTPerrors in an asyncoutbox journey, so neither availability alert fires.
+- Checked modelcounts200registrations/20events/5slow,14.5extra-delayseconds,zeroavailabilitybudgetconsumption and the separately labeled hypothetical5xxalert math.
+- Published CP6/CP7 in the first work block, then began CP8 after a42-minute break. CP8/CP9/CP10 form the second block; checkpoint publications are separated by at least15minutes.
+- Student-owned reflection entriesCP6-CP9 and the minimumone-page implementation plan were not written by this technical workflow and are not verified complete.
+
 ## 3. Blockers and risks
 - This workshop probe does not prove real broker delivery, PostgreSQL persistence, outbox recovery, Notifications processing or visible guardian notification. HU-005/HU-002 remain doing.
 - Local Git DNS failed; separate checkpoint publications used the GitHub connector with verified account metadata. Published history was not rewritten.
 - CP4 and closing evidence were published after the October20 20:30 deadline. No on-time completion or Moodle submission is claimed.
 - Production integration still needs durable context in the outbox, publisher confirms, approved migrations in the domain DB repository and a real integration environment.
 
+- Moodle assignment text specifies D2deadline Wednesday2026-10-21 23:59-05:00, overriding Thursday10:10 in the PDF. CP7andlater were published after that deadline; no extension or submission is verified.
+
 ## 4. Plan for next week
 - Extend these contracts into the production Attendance adapter and Notifications consumer through the required reviewed HU workflow.
 - Verify real broker redelivery, ordering/idempotency and notification persistence; add evidence before changing story completion status.
-- Follow up with the separate W11 delivery2: SLOs, alerts, runbook and incident exercise; those files are not part of this delivery.
+- Turn the Delivery2 proposals into reviewed implementation stories; validate the missing end-to-end delay metric and real broker/consumer behavior before claiming reliability compliance.
 
 ## 5. Compliance self-check
 - [x] Conventional Commits - `type(scope): summary`
@@ -60,3 +72,11 @@ The integration checkbox above is intentionally unchecked. Existing production d
 - [CP4: metric catalog](https://github.com/CelesteDussan/sistemas-distribuidos-2026-b-g1/commit/419a6e82e0401c0db0316931da894bd77b8e4416)
 - [Workshop directory](../workshop/README.md)
 - [Personal reflection document](https://docs.google.com/document/d/112slj18F1BwunuOD7-e-P3Djnzv7Bv57qoX09uXK10I/edit)
+
+### Delivery 2 evidence
+- [CP6: SLOs and budgets](https://github.com/CelesteDussan/sistemas-distribuidos-2026-b-g1/commit/633378da208c93934b36fa138d26ca86682d15e6)
+- [CP7: burn-rate rules and policy](https://github.com/CelesteDussan/sistemas-distribuidos-2026-b-g1/commit/a55459beda91ff06ef93a5d2f9c81d32553a188b)
+- [CP8: runbook](https://github.com/CelesteDussan/sistemas-distribuidos-2026-b-g1/commit/ae773bfc250cb2978822e7b7df1b79291437dbb6)
+- [CP9: analytic incident and postmortem](https://github.com/CelesteDussan/sistemas-distribuidos-2026-b-g1/commit/9df2794220c6ffd8023a5f99518f780fe48ba33d)
+- CP10 closes this weekly report and the workshopindex; its resulting commit is available in the [branchhistory](https://github.com/CelesteDussan/sistemas-distribuidos-2026-b-g1/commits/codex/w11-observability).
+- [SLO artifact](../workshop/05-slo.md), [alert rules](../workshop/06-alerts.yml), [policy](../workshop/06-alert-policy.md), [runbook](../workshop/07-runbook.md), [incident](../workshop/08-incident.md).
