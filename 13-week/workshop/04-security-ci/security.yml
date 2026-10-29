@@ -1,0 +1,34 @@
+name: Attendance security gates
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Scan repository history for secrets
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
+        with:
+          repository: code-corhuila/educk-attendance-api
+          ref: 8b1cf52501a6b994a5adb2c3918591e28a80684d
+          path: attendance
+          token: ${{ secrets.GH_ATTENDANCE_READ_TOKEN }}
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Audit actual Attendance Maven dependencies
+        working-directory: attendance
+        run: mvn -B org.owasp:dependency-check-maven:12.1.0:check -DfailBuildOnCVSS=7
+      - name: Run negative authorization regression
+        run: |
+          mkdir -p attendance/src/test/java/com/corhuila/edutrack/attendance/infrastructure/web
+          cp 13-week/workshop/04-security-ci/AttendanceAuthorizationTest.java attendance/src/test/java/com/corhuila/edutrack/attendance/infrastructure/web/AttendanceAuthorizationTest.java
+          mvn -B -f attendance/pom.xml -Dtest=AttendanceAuthorizationTest test
