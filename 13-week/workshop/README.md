@@ -46,3 +46,13 @@ This is later than the scheduled CP0 slot; publication times remain unmodified.
 - Project backlog placement is being verified separately. The consulted physical-book
   citation and its derived acceptance criterion remain pending in #69 and the model.
 - Creating issues does not mean their security controls have been implemented.
+
+## CP4 and CP5
+
+- [CI proposal, real regression output and limits](04-security-ci/HOW-TO-RUN.md).
+- [Weekly evidence and outstanding requirements](../hu-status/README.md).
+- [Peer review](https://github.com/code-corhuila/educk-docs/pull/70#pullrequestreview-5691574507)
+  identifies the untrusted-header ownership predicate in Communication row I.
+  Review event is COMMENT; no approval or merge.
+- A finished Moodle submission is not claimed while library evidence, reflection
+  and GitHub Project placement remain unresolved.
