@@ -10,7 +10,7 @@
 - REFLECTION_DOC: pending student-created Week 13 document
 - LIBRARY_BOOK: pending verified physical-library consultation details
 - LIBRARY_RECORD_TIME: pending actual CORHUILA library record
-- STORIES: pending CP3
+- STORIES: https://github.com/code-corhuila/educk-docs/issues/67, https://github.com/code-corhuila/educk-docs/issues/68, https://github.com/code-corhuila/educk-docs/issues/69
 <!-- CONFIG-END -->
 
 ## Scope
@@ -34,3 +34,15 @@ This is later than the scheduled CP0 slot; publication times remain unmodified.
 - CP0 is incomplete until the student creates/shares the reflection document.
 - Library consultation and reflection entries require the student's real evidence.
 - All technical artifacts are in English. Checkpoints are published separately.
+
+## CP2 and CP3
+
+- [STRIDE PR #65](https://github.com/code-corhuila/educk-docs/pull/65): six threats,
+  provisional risk scores, ordered mitigations and proposed residual acceptance.
+- [E / P0 / risk 9: teacher-only writes](https://github.com/code-corhuila/educk-docs/issues/67).
+- [I / P0 / risk 9: student/school-scoped queries](https://github.com/code-corhuila/educk-docs/issues/68).
+- [S / P0 / risk 9: trusted teacher attribution](https://github.com/code-corhuila/educk-docs/issues/69).
+- All three issues have verified `security` and `P0` labels and automated acceptance criteria.
+- Project backlog placement is being verified separately. The consulted physical-book
+  citation and its derived acceptance criterion remain pending in #69 and the model.
+- Creating issues does not mean their security controls have been implemented.
