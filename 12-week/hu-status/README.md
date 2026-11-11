@@ -29,11 +29,22 @@ On October 25, I reviewed the state of 19 official project repositories and reco
 - Identified that a complete real-service user journey had not been established and documented concrete portal, backend, infrastructure, and contract dependencies for follow-up.
 - Did not run tests or a full runtime deployment for the review; historical CI links in the report were identified as historical evidence, not new validation.
 
+### My frontend implementation evidence already in the project
+
+These implementation commits predate the October 25 repository review; they are included as evidence of my frontend contribution, not as code changes made on the review date.
+
+- HU-001: built the grade filter and weighted-average view; [commit 4c71508](https://github.com/code-corhuila/educk-academic-portal/commit/4c7150858e6d95c1fa2b25884c6d751b780ebd8c), then added classification coverage in [commit bbc2e75](https://github.com/code-corhuila/educk-academic-portal/commit/bbc2e75afa49a54bd3aa4bae1c39b3f2b03b14dc). Tests passed 5/5 and then 7/7; the adapter used simulated data while backend enrichment remained pending.
+- HU-003: implemented the session profile, role badges, credential error and logout in [commit a60627b](https://github.com/code-corhuila/educk-identity-portal/commit/a60627b57054c1565580ddef2b8c529e303c7053); 6/6 tests and build passed. Access tokens were memory-only; real shared-shell session behavior still needed integration validation.
+- HU-004: implemented filtered notices, read state and an accessible responsive dialog in [commit 92bf81e](https://github.com/code-corhuila/educk-communication-portal/commit/92bf81ed02b75a08cfe094cfe2b0d01a7f5228ec); 6/6 tests and build passed, with manual keyboard/focus checks. The slice did not establish real backend persistence.
+- HU-005: implemented the date-based attendance session summary and responsive controls in [commit 195105c](https://github.com/code-corhuila/educk-attendance-portal/commit/195105c0bc236e6557c701a882aff9160c5be403); 6/6 tests and build passed. Save feedback was local and did not call the backend.
+- GW-001: unified navigation across the four microfrontends in [commit c844cac](https://github.com/code-corhuila/educk-front/commit/c844cacd6095964d0c7c80dedd4f6343051e896e); 4/4 tests, lint and build passed, with manual checks at desktop, 768 px and 320 px.
+
 ## 3. Blockers and risks
 
 - The portal PRs were open at the October 25 observation; the review did not verify approval or merge readiness for each PR.
 - No fresh browser acceptance or complete real-service journey was run for this review.
 - Communication MongoDB provisioning/credentials and end-to-end notification ownership remained unresolved in the reviewed project state.
+- Earlier portal slices had explicit integration limits: Academic used simulated grades pending API fields; Attendance and Communication used local/mock state; and real shell-session behavior was not verified. These are not claims of current runtime acceptance.
 
 ## 4. Plan for next week
 
