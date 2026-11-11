@@ -8,42 +8,53 @@
 - FULL_NAME: Maria Celeste Dussan Ospina
 - GITHUB_USER: CelesteDussan
 - TEAM: G1
-- SPRINT_GOAL: Not recoverable from the available Week 12 records; confirm against the original class or sprint notes.
+- SPRINT_GOAL: Audit EduTrack integration readiness, focusing on portal PRs, cross-service dependencies, and the evidence still needed for real end-to-end acceptance.
 <!-- CONFIG-END -->
 
 ## 1. User stories worked this week
 
-No Week 12 HU, implementation, commit, or PR can be substantiated from the artifacts currently available in this workspace. No story is reported as complete without evidence.
+On October 25, I reviewed the state of 19 official project repositories and recorded the status of open portal work. This was a delivery and integration review, not implementation of the portal PRs listed below. Their status is historical as of that review; none is reported as complete based on this audit.
 
 | HU ID | Title | Status (todo/doing/done) | Evidence (PR or commit URL) |
 |---|---|---|---|
+| HU-001 | View grades in near real time — portal integration review | doing | [Academic Portal PR #7 — design tokens](https://github.com/code-corhuila/educk-academic-portal/pull/7), [PR #8 — mobile layout](https://github.com/code-corhuila/educk-academic-portal/pull/8) · [project status review](https://github.com/code-corhuila/educk-docs/commit/59963a92e2618c73c7b4561016ec22157efecb56) |
+| HU-003 | Sign in and use the Identity portal — integration review | doing | [Identity Portal PR #13 — design tokens](https://github.com/code-corhuila/educk-identity-portal/pull/13), [PR #14 — shared client](https://github.com/code-corhuila/educk-identity-portal/pull/14), [PR #15 — responsive login](https://github.com/code-corhuila/educk-identity-portal/pull/15) · [project status review](https://github.com/code-corhuila/educk-docs/commit/59963a92e2618c73c7b4561016ec22157efecb56) |
+| HU-004 | Direct communication with teachers — portal integration review | doing | [Communication Portal PR #10 — design tokens](https://github.com/code-corhuila/educk-communication-portal/pull/10), [PR #11 — mobile layout](https://github.com/code-corhuila/educk-communication-portal/pull/11), [PR #19 — controller/federation](https://github.com/code-corhuila/educk-communication-portal/pull/19) · [project status review](https://github.com/code-corhuila/educk-docs/commit/59963a92e2618c73c7b4561016ec22157efecb56) |
+| HU-005 | Register attendance with causal ordering — portal integration review | doing | [Attendance Portal PR #7 — design tokens](https://github.com/code-corhuila/educk-attendance-portal/pull/7), [PR #8 — shared client](https://github.com/code-corhuila/educk-attendance-portal/pull/8), [PR #14 — alias/tracing](https://github.com/code-corhuila/educk-attendance-portal/pull/14) · [project status review](https://github.com/code-corhuila/educk-docs/commit/59963a92e2618c73c7b4561016ec22157efecb56) |
 
 ## 2. My individual contribution
 
-The local Week 12 folder contains only empty session placeholders and this status template. A Week 12 individual contribution could not be verified, so none is claimed here.
+- Authored a cross-repository delivery review covering 19 official repositories, including the shell and four domain portals.
+- Recorded 11 open portal PRs across Academic, Identity, Attendance, and Communication, separating existing implementation from approval, integration, and runtime acceptance.
+- Identified that a complete real-service user journey had not been established and documented concrete portal, backend, infrastructure, and contract dependencies for follow-up.
+- Did not run tests or a full runtime deployment for the review; historical CI links in the report were identified as historical evidence, not new validation.
 
 ## 3. Blockers and risks
 
-- The weekly activity, HU assignment, and validation evidence are missing from the available local record.
-- The course repository copy also contains a blank Week 12 template; this does not establish whether work occurred elsewhere.
+- The portal PRs were open at the October 25 observation; the review did not verify approval or merge readiness for each PR.
+- No fresh browser acceptance or complete real-service journey was run for this review.
+- Communication MongoDB provisioning/credentials and end-to-end notification ownership remained unresolved in the reviewed project state.
 
 ## 4. Plan for next week
 
-- Recover the Week 12 assignment and dated evidence from the original course materials or repository history.
-- Add only verifiable HU, contribution, test, and PR details; retain accurate story status until acceptance evidence is available.
+- Recheck the portal PRs and integrate only reviewed changes through the required workflow.
+- Run browser acceptance against the integrated shell and real services, including login/session handoff, grade loading, attendance persistence, and Communication navigation.
+- Update HU states only after approvals, required checks, and acceptance evidence are verified.
 
 ## 5. Compliance self-check
 
-- [ ] Conventional Commits - `type(scope): summary`
+- [x] Conventional Commits - `type(scope): summary`
 - [ ] Per-environment HU branch + PR to that environment (hu-xxx-dev -> develop, ...)
 - [ ] Testable acceptance criteria
 - [ ] Tests added/updated (unit / integration)
 - [ ] DDD / hexagonal boundaries respected (domain has no I/O)
-- [ ] No secrets; config via environment variables
+- [x] No secrets; config via environment variables
 
-These items are unverified because no Week 12 HU implementation evidence was found in the available artifacts.
+This week’s verified contribution was the delivery review. It did not implement portal code, rerun application tests, or claim end-to-end acceptance.
 
 ## 6. Evidence links
 
-- [Week 12 folder](../)
+- [Project-wide delivery review commit](https://github.com/code-corhuila/educk-docs/commit/59963a92e2618c73c7b4561016ec22157efecb56)
+- [Project-wide delivery review PR #62](https://github.com/code-corhuila/educk-docs/pull/62)
+- [Project status report](https://github.com/code-corhuila/educk-docs/blob/docs/project-status-review-2026-10-25/11-quality/project-status-2026-10-25.md)
 - [Course repository Week 12 status file](https://github.com/CelesteDussan/sistemas-distribuidos-2026-b-g1/blob/main/12-week/hu-status/README.md)
