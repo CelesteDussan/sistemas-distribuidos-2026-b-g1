@@ -5,33 +5,67 @@
 # Weekly Status - Week 12
 
 <!-- CONFIG-START - must match your profile repo (username/username) CONFIG -->
-- FULL_NAME:
-- GITHUB_USER:
-- TEAM:
-- SPRINT_GOAL:
+- FULL_NAME: Maria Celeste Dussan Ospina
+- GITHUB_USER: CelesteDussan
+- TEAM: G1
+- SPRINT_GOAL: Audit EduTrack integration readiness, focusing on portal PRs, cross-service dependencies, and the evidence still needed for real end-to-end acceptance.
 <!-- CONFIG-END -->
 
 ## 1. User stories worked this week
+
+On October 25, I reviewed the state of 19 official project repositories and recorded the status of open portal work. This was a delivery and integration review, not implementation of the portal PRs listed below. Their status is historical as of that review; none is reported as complete based on this audit.
+
 | HU ID | Title | Status (todo/doing/done) | Evidence (PR or commit URL) |
 |---|---|---|---|
-| HU-XXX-001 |  |  |  |
+| HU-001 | View grades in near real time — portal integration review | doing | [Academic Portal PR #7 — design tokens](https://github.com/code-corhuila/educk-academic-portal/pull/7), [PR #8 — mobile layout](https://github.com/code-corhuila/educk-academic-portal/pull/8) · [project status review](https://github.com/code-corhuila/educk-docs/commit/59963a92e2618c73c7b4561016ec22157efecb56) |
+| HU-003 | Sign in and use the Identity portal — integration review | doing | [Identity Portal PR #13 — design tokens](https://github.com/code-corhuila/educk-identity-portal/pull/13), [PR #14 — shared client](https://github.com/code-corhuila/educk-identity-portal/pull/14), [PR #15 — responsive login](https://github.com/code-corhuila/educk-identity-portal/pull/15) · [project status review](https://github.com/code-corhuila/educk-docs/commit/59963a92e2618c73c7b4561016ec22157efecb56) |
+| HU-004 | Direct communication with teachers — portal integration review | doing | [Communication Portal PR #10 — design tokens](https://github.com/code-corhuila/educk-communication-portal/pull/10), [PR #11 — mobile layout](https://github.com/code-corhuila/educk-communication-portal/pull/11), [PR #19 — controller/federation](https://github.com/code-corhuila/educk-communication-portal/pull/19) · [project status review](https://github.com/code-corhuila/educk-docs/commit/59963a92e2618c73c7b4561016ec22157efecb56) |
+| HU-005 | Register attendance with causal ordering — portal integration review | doing | [Attendance Portal PR #7 — design tokens](https://github.com/code-corhuila/educk-attendance-portal/pull/7), [PR #8 — shared client](https://github.com/code-corhuila/educk-attendance-portal/pull/8), [PR #14 — alias/tracing](https://github.com/code-corhuila/educk-attendance-portal/pull/14) · [project status review](https://github.com/code-corhuila/educk-docs/commit/59963a92e2618c73c7b4561016ec22157efecb56) |
 
 ## 2. My individual contribution
--
+
+- Authored a cross-repository delivery review covering 19 official repositories, including the shell and four domain portals.
+- Recorded 11 open portal PRs across Academic, Identity, Attendance, and Communication, separating existing implementation from approval, integration, and runtime acceptance.
+- Identified that a complete real-service user journey had not been established and documented concrete portal, backend, infrastructure, and contract dependencies for follow-up.
+- Did not run tests or a full runtime deployment for the review; historical CI links in the report were identified as historical evidence, not new validation.
+
+### My frontend implementation evidence already in the project
+
+These implementation commits predate the October 25 repository review; they are included as evidence of my frontend contribution, not as code changes made on the review date.
+
+- HU-001: built the grade filter and weighted-average view; [commit 4c71508](https://github.com/code-corhuila/educk-academic-portal/commit/4c7150858e6d95c1fa2b25884c6d751b780ebd8c), then added classification coverage in [commit bbc2e75](https://github.com/code-corhuila/educk-academic-portal/commit/bbc2e75afa49a54bd3aa4bae1c39b3f2b03b14dc). Tests passed 5/5 and then 7/7; the adapter used simulated data while backend enrichment remained pending.
+- HU-003: implemented the session profile, role badges, credential error and logout in [commit a60627b](https://github.com/code-corhuila/educk-identity-portal/commit/a60627b57054c1565580ddef2b8c529e303c7053); 6/6 tests and build passed. Access tokens were memory-only; real shared-shell session behavior still needed integration validation.
+- HU-004: implemented filtered notices, read state and an accessible responsive dialog in [commit 92bf81e](https://github.com/code-corhuila/educk-communication-portal/commit/92bf81ed02b75a08cfe094cfe2b0d01a7f5228ec); 6/6 tests and build passed, with manual keyboard/focus checks. The slice did not establish real backend persistence.
+- HU-005: implemented the date-based attendance session summary and responsive controls in [commit 195105c](https://github.com/code-corhuila/educk-attendance-portal/commit/195105c0bc236e6557c701a882aff9160c5be403); 6/6 tests and build passed. Save feedback was local and did not call the backend.
+- GW-001: unified navigation across the four microfrontends in [commit c844cac](https://github.com/code-corhuila/educk-front/commit/c844cacd6095964d0c7c80dedd4f6343051e896e); 4/4 tests, lint and build passed, with manual checks at desktop, 768 px and 320 px.
 
 ## 3. Blockers and risks
--
+
+- The portal PRs were open at the October 25 observation; the review did not verify approval or merge readiness for each PR.
+- No fresh browser acceptance or complete real-service journey was run for this review.
+- Communication MongoDB provisioning/credentials and end-to-end notification ownership remained unresolved in the reviewed project state.
+- Earlier portal slices had explicit integration limits: Academic used simulated grades pending API fields; Attendance and Communication used local/mock state; and real shell-session behavior was not verified. These are not claims of current runtime acceptance.
 
 ## 4. Plan for next week
--
+
+- Recheck the portal PRs and integrate only reviewed changes through the required workflow.
+- Run browser acceptance against the integrated shell and real services, including login/session handoff, grade loading, attendance persistence, and Communication navigation.
+- Update HU states only after approvals, required checks, and acceptance evidence are verified.
 
 ## 5. Compliance self-check
-- [ ] Conventional Commits - `type(scope): summary`
+
+- [x] Conventional Commits - `type(scope): summary`
 - [ ] Per-environment HU branch + PR to that environment (hu-xxx-dev -> develop, ...)
 - [ ] Testable acceptance criteria
 - [ ] Tests added/updated (unit / integration)
 - [ ] DDD / hexagonal boundaries respected (domain has no I/O)
-- [ ] No secrets; config via environment variables
+- [x] No secrets; config via environment variables
+
+This week’s verified contribution was the delivery review. It did not implement portal code, rerun application tests, or claim end-to-end acceptance.
 
 ## 6. Evidence links
--
+
+- [Project-wide delivery review commit](https://github.com/code-corhuila/educk-docs/commit/59963a92e2618c73c7b4561016ec22157efecb56)
+- [Project-wide delivery review PR #62](https://github.com/code-corhuila/educk-docs/pull/62)
+- [Project status report](https://github.com/code-corhuila/educk-docs/blob/docs/project-status-review-2026-10-25/11-quality/project-status-2026-10-25.md)
+- [Course repository Week 12 status file](https://github.com/CelesteDussan/sistemas-distribuidos-2026-b-g1/blob/main/12-week/hu-status/README.md)
